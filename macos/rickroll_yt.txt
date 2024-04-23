@@ -1,0 +1,19 @@
+ID 05ac:021e Apple:Keyboard
+
+REM Author: sud0cat
+REM Description: Plays the RickRoll YouTube video.
+REM Target: macOS
+
+REM Open terminal window
+F4
+DELAY 500
+STRING terminal
+DELAY 500
+ENTER
+DELAY 500
+
+REM Open website using default browser
+STRING open -g https://www.youtube.com/watch?v=dQw4w9WgXcQ
+ENTER
+STRING kill -9 $(ps -p $PPID -o ppid=)
+ENTER
