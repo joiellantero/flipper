@@ -1,7 +1,7 @@
 ID 05ac:021e Apple:Keyboard
 
 REM Author: sud0cat
-REM Description: Plays the RickRoll YouTube video.
+REM Description: Plays the RickRoll YouTube vide
 REM Target: macOS
 
 REM Open terminal window
@@ -12,8 +12,10 @@ DELAY 500
 ENTER
 DELAY 500
 
-REM Open website using default browser
+REM Open website using default browser in the background
 STRING open -g https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ENTER
+
+REM Quit terminal after running all commands
 STRING kill -9 $(ps -p $PPID -o ppid=)
 ENTER
