@@ -7,7 +7,7 @@
 ╚═╝     ╚══════╝╚═╝╚═╝     ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ 
 ```
 
-Collectinon of scripts I made for Flipper Zero. For now, I'm focusing on macOS attacks.
+Collection of scripts I made for Flipper Zero. For now, I'm focusing on macOS attacks.
 
 > [!IMPORTANT]  
 > For educational use only and should not be used for illegal activities.
