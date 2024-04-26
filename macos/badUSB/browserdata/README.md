@@ -15,7 +15,7 @@
 **How can you modify this?**
   1. Gather more browser data, e.g., cookies, history, bookmarks, etc.
   2. Use email instead of Telegram.
-  3. Change the cronjob frequency.
+  3. Change the cronjob frequency ([cronjob translator](https://crontab.guru/)).
 
 > [!IMPORTANT]  
 > For educational use only and should not be used for illegal activities.
