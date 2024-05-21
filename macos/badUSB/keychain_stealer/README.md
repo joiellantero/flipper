@@ -1,7 +1,7 @@
 # Keychain Stealer
 
 **Process**
-  1. Opens a terminal and disabled shell history
+  1. Opens a terminal and disables the shell history
   2. Locates the encrypted keychain file
   3. Send the files to the threat actor's Telegram
    
