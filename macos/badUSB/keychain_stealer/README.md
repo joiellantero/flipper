@@ -3,7 +3,7 @@
 **Process**
   1. Opens a terminal and disables the shell history
   2. Locates the encrypted keychain file
-  3. Send the files to the threat actor's Telegram
+  3. Send the files to the Telegram C2 channel
    
 **Dependencies**
   1. Telegram
