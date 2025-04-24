@@ -5,10 +5,9 @@ REM Description: Plays the RickRoll YouTube vide
 REM Target: macOS
 
 REM Open terminal window
-F4
+GUI SPACE
 DELAY 500
 STRING terminal
-DELAY 750
 ENTER
 DELAY 500
 
