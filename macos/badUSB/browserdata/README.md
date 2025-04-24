@@ -1,10 +1,10 @@
 # Browser Data Exfiltration
 
 **Process**
-  1. Creates a hidden folder to prepare data.
-  2. Downloads the script to the hidden folder.
-  3. Sends the initial gathered browser login data via Telegram.
-  4. Creates a cronjob to exfiltrate data every week.
+  1. Creates a hidden folder to prepare data for extract.
+  2. Downloads the info stealer script.
+  3. Sends the browser data via Telegram (C2 channel).
+  4. Creates a cronjob to get data every week.
    
 **Dependencies**
   1. Telegram
@@ -17,5 +17,5 @@
   
 **How can you modify this?**
   1. Gather more browser data, e.g., cookies, history, bookmarks, etc.
-  2. Use email instead of Telegram.
+  2. Use email or cloud storage instead of Telegram.
   3. Change the cronjob frequency ([cronjob translator](https://crontab.guru/)).
