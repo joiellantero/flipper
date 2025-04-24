@@ -12,6 +12,3 @@
   1. Change `<your_chat_id>` in `keychain_stealer_tg.sh` to your Telegram chat ID.
   2. Change `<your_bot_id>` in `browsekeychain_stealer_tg.sh` to your Telegram bot ID.
   3. Transfer `keychain_stealer_tg.txt` to your FlipperZero device.
-
-> [!IMPORTANT]  
-> For educational use only and should not be used for illegal activities.
