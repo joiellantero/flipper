@@ -3,7 +3,7 @@
 **Process**
   1. Creates a hidden folder to prepare data for extract.
   2. Downloads the info stealer script.
-  3. Sends the browser data via Telegram (C2 channel).
+  3. Sends the browser data to Telegram C2 channel.
   4. Creates a cronjob to get data every week.
    
 **Dependencies**
